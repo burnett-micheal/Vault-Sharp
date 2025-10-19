@@ -1,0 +1,25 @@
+# Build outputs
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.cache
+runtimes/
+
+# User data
+AppData/database.db
+AppData/session_data/app_state/*
+AppData/session_data/user_input/*
+!AppData/session_data/app_state/.gitkeep
+!AppData/session_data/user_input/.gitkeep
+
+# IDE
+.vs/
+.vscode/
+*.user
+*.suo
+
+# OS
+.DS_Store
+Thumbs.db
