@@ -1,18 +1,9 @@
-﻿[<- Nav Back](vaultbridge://system/navigation/back) ----- ~~Nav Forward ->~~
+﻿~~<- Nav Back~~ ----- ~~Nav Forward ->~~
 
-# Person Table
+# Database Dashboard
 
-Showing 1-5 of 5 people
+Welcome to the VaultSharp Database Dashboard!
 
-| ID | First Name | Middle Name | Last Name | Actions |
-|---|---|---|---|---|
-| 2 | Micheal |  | Burns | [view](vaultbridge://dbdashboard/person/pages/detail?id=2) |
-| 3 | FN1 | M1 | LN1 | [view](vaultbridge://dbdashboard/person/pages/detail?id=3) |
-| 4 | FN2 | MN2 | LN2 | [view](vaultbridge://dbdashboard/person/pages/detail?id=4) |
-| 5 | FN3 | MN3 | LN3 | [view](vaultbridge://dbdashboard/person/pages/detail?id=5) |
-| 9 | Kill | Me | Please | [view](vaultbridge://dbdashboard/person/pages/detail?id=9) |
+## Available Tables
 
-
-[Create Person](vaultbridge://dbdashboard/person/operations/create/stage)
-
-[<- Back to Home](vaultbridge://dbdashboard/homepage)
+[👤 Person Table](vaultbridge://dbdashboard/person/pages/table?page=1&pageSize=5)
