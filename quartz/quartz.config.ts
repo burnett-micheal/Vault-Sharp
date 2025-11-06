@@ -11,7 +11,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "vaultsharp.vercel.app",
+    baseUrl: "vaultsharp-dev-polymorphism.vercel.app",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
