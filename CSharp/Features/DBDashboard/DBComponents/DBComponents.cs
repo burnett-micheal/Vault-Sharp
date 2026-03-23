@@ -1,4 +1,5 @@
 using VaultSharp.Framework.Data.Interfaces;
+using VaultSharp.Framework.Data.InternalModels;
 using C = VaultSharp.Framework.Rendering.Markdown.Components;
 
 namespace VaultSharp.Features.DBDashboard
@@ -28,14 +29,15 @@ namespace VaultSharp.Features.DBDashboard
     }
 
     public static string Pagination(
-      int currentPage,
+      TableOptions tableOptions,
       int totalPages,
-      int pageSize,
-      Func<string, int, int, bool, string> buildLink
+      Func<string, TableOptions, bool, string> buildLink
     )
     {
-      string prevLink = buildLink("<- Previous", currentPage - 1, pageSize, currentPage <= 1);
-      string nextLink = buildLink("Next ->", currentPage + 1, pageSize, currentPage >= totalPages);
+      int currentPage = tableOptions.Page;
+
+      string prevLink = buildLink("<- Previous", tableOptions.PrevPage(), currentPage <= 1);
+      string nextLink = buildLink("Next ->", tableOptions.NextPage(), currentPage >= totalPages);
 
       return $"{prevLink}  |  Page {currentPage} of {totalPages}  |  {nextLink}";
     }

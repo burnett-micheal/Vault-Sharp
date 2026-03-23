@@ -1,4 +1,6 @@
 using Microsoft.Data.Sqlite;
+using VaultSharp.Framework.Data.InternalModels;
+using VaultSharp.Framework.Utils.Enums;
 
 namespace VaultSharp.Framework.Data.SQLiteDB.Tables.Person
 {
@@ -49,21 +51,23 @@ namespace VaultSharp.Framework.Data.SQLiteDB.Tables.Person
       return null;
     }
 
-    public static List<Model> GetList(SqliteConnection connection, int limit = 50, int offset = 0)
+    public static List<Model> GetList(SqliteConnection connection, TableOptions tableOptions)
     {
+      int limit = tableOptions.PageSize;
+      int offset = (tableOptions.Page - 1) * tableOptions.PageSize;
+      Column col = tableOptions.SortColumn ?? Columns.LastName;
+      string dir = tableOptions.SortDirection ?? SortDirection.Ascending;
+
       var people = new List<Model>();
 
       var command = connection.CreateCommand();
       command.CommandText =
-        @"
+        $@"
         SELECT Id, FirstName, MiddleName, LastName
         FROM People
-        ORDER BY LastName, FirstName
-        LIMIT $limit OFFSET $offset;
+        ORDER BY {col.Sql} {dir}, Id ASC
+        LIMIT {limit} OFFSET {offset};
       ";
-
-      command.Parameters.AddWithValue("$limit", limit);
-      command.Parameters.AddWithValue("$offset", offset);
 
       using var reader = command.ExecuteReader();
       while (reader.Read())
