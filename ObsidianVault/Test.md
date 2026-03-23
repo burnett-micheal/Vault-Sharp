@@ -1,16 +1,9 @@
-﻿[<- Nav Back](vaultbridge://system/navigation/back) ----- ~~Nav Forward ->~~
+~~<- Nav Back~~ ----- ~~Nav Forward ->~~
 
-# Person Table
+# Database Dashboard
 
-Showing 6-6 of 6 people
+Welcome to the VaultSharp Database Dashboard!
 
-| [ID](vaultbridge://dbdashboard/person/pages/table?page=1&pageSize=5&sortName=ID&sortDirection=ASC) | [First Name ↑](vaultbridge://dbdashboard/person/pages/table?page=1&pageSize=5&sortName=First+Name&sortDirection=DESC) | [Middle Name](vaultbridge://dbdashboard/person/pages/table?page=1&pageSize=5&sortName=Middle+Name&sortDirection=ASC) | [Last Name](vaultbridge://dbdashboard/person/pages/table?page=1&pageSize=5&sortName=Last+Name&sortDirection=ASC) | Actions |
-|---|---|---|---|---|
-| 2 | Tyler | James | Powell | [view](vaultbridge://dbdashboard/person/pages/detail?id=2) |
+## Available Tables
 
-
-[<- Previous](vaultbridge://dbdashboard/person/pages/table?page=1&pageSize=5&sortName=First+Name&sortDirection=ASC)  |  Page 2 of 2  |  ~~Next ->~~
-
-[Create Person](vaultbridge://dbdashboard/person/operations/create/stage)
-
-[<- Back to Home](vaultbridge://dbdashboard/homepage)
+[👤 Person Table](vaultbridge://dbdashboard/person/pages/table?page=1&pageSize=5)
