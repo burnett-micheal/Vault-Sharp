@@ -4,7 +4,7 @@
 Built with C# + SQLite + Obsidian. 
 
 ## Tech Stack
-- **C# Backend** - Command routing, business logic, automation
+- **C# Backend** - Command routing, logic, automation
 - **SQLite Database** - Local data storage
 - **Obsidian** - Markdown-based UI
 - **VSCode** - JSON template editing
