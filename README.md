@@ -11,7 +11,7 @@ Built with C# + SQLite + Obsidian.
 - **URI Protocol** - `vaultbridge://` commands
 
 ## Quick Start
-Documentation coming soon. For now, check the subreddit for development updates and discussions.
+Documentation coming soon.
 
 ---
 
